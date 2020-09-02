@@ -8,7 +8,7 @@ const questions = [
       type: "input",
       message: "What is the title of the project?",
       name: "title",
-      default: "Tast"
+      default: "Readme.md"
    },
    {
       type: "input",
@@ -94,7 +94,7 @@ inquirer.prompt(questions).then((res) => {
       console.log("Successfully! Created a Description")
    })
 
-   fs.appendFileSync("README.md", ("## Table of Contents" + '\n' + '- ' + ["Instructions", "Usage", "License", "Contibute", "[Test2](#https://www.google.com)", "Questions"].join('\n' + '- ')) + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## Table of Contents" + '\n' + '- ' + ["[Instructions](#instructions)", "[Usage](#usage)", "[License](#license)", "[Contibute](#contibute)", "[Test](#test)", "[Questions](#questions)"].join('\n' + '- ')) + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
@@ -126,6 +126,12 @@ inquirer.prompt(questions).then((res) => {
       console.log("Seccessfully! Created Contribute")
    })
    fs.appendFileSync("README.md", ("## Test" + '\n' + "### " + res.test) + '\n', function (err) {
+      if (err) {
+         return console.log(err)
+      }
+      console.log("Successfully! Created Test")
+   })
+   fs.appendFileSync("README.md", ("## Contact" + '\n' + "### If you have any questions about the repo, contact me directly at [My Email](" + res.email + "). You can find more of my work at [My GiitHub](https://github.com/" + res.github + ")") + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
