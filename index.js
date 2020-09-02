@@ -127,7 +127,7 @@ inquirer.prompt(questions).then((res) => {
       }
       console.log("Successfully! Created Test")
    })
-   fs.appendFileSync("README.md", ("## Questions" + '\n' + "### If you have any questions about the repo, contact me directly at " + [res.email](res.email) + ". You can find more of my work at [My GiitHub](https://github.com/" + res.github + ").") + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## Questions" + '\n' + "### If you have any questions about the repo, contact me directly at " + (res.email) + ". You can find more of my work at [My GiitHub](https://github.com/" + res.github + ").") + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
