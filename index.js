@@ -22,15 +22,10 @@ const questions = [
       name: "description",
       default: "Tast"
    },
-   // {
-   //    type: "input",
-   //    message: "Write a table of contents",
-   //    name: "table"
-   // },
    {
       type: "input",
-      message: "Installation instructions",
-      name: "instructions",
+      message: "What command should be run to install dependencies?",
+      name: "installation",
       default: "Tast"
    },
    {
@@ -43,7 +38,7 @@ const questions = [
       type: "rawlist",
       message: "What kind of license should your project have?",
       name: "license",
-      choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
+      choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3", "None"],
       default: "Tast"
    },
    {
@@ -60,14 +55,14 @@ const questions = [
    },
    {
       type: "input",
-      message: "Please enter your GitHub username",
-      name: "github",
+      message: "Please enter your Email address",
+      name: "email",
       default: "Tast"
    },
    {
       type: "input",
-      message: "Please enter your Email address",
-      name: "email",
+      message: "Please enter your GitHub username",
+      name: "github",
       default: "Tast"
    }
 ]
@@ -80,6 +75,12 @@ inquirer.prompt(questions).then((res) => {
    fs.appendFileSync("README.md", ("# **" + res.title + "**") + '\n', function (err) {
       if (err) throw err
       console.log("Successfully! Created a title")
+   })
+   fs.appendFileSync("README.md", ("## License" + '\n' + "### This project is licensed under the [GitHub license](http://img.shields.io/badge/license-" + res.license + "-blue.svg)" + " license." + '\n') + '\n', function (err) {
+      if (err) {
+         return console.log(err)
+      }
+      console.log("Successfully! Created License")
    })
 
    fs.appendFileSync("README.md", ('\n' + "### " + res.badge) + '\n', function (err) {
@@ -101,7 +102,7 @@ inquirer.prompt(questions).then((res) => {
       console.log("Successfully! Created a Table")
    })
 
-   fs.appendFileSync("README.md", ("## Instructions" + '\n' + "### " + res.instructions) + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## Installation" + '\n' + "### To install necessary dependencies, run the following command: \n```" + res.installation) + "\n```" + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
@@ -113,25 +114,20 @@ inquirer.prompt(questions).then((res) => {
       }
       console.log("Successfully! Created a Usage")
    })
-   fs.appendFileSync("README.md", ("## License" + '\n' + "### " + res.license + '\n') + '\n', function (err) {
-      if (err) {
-         return console.log(err)
-      }
-      console.log("Successfully! Created License")
-   })
+
    fs.appendFileSync("README.md", ("## Contibute" + '\n' + "### " + res.contribute) + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
       console.log("Seccessfully! Created Contribute")
    })
-   fs.appendFileSync("README.md", ("## Test" + '\n' + "### " + res.test) + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## Test" + '\n' + "### To run tests, run the following command: \n ```" + res.test) + "\n ```" + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
       console.log("Successfully! Created Test")
    })
-   fs.appendFileSync("README.md", ("## Contact" + '\n' + "### If you have any questions about the repo, contact me directly at [My Email](" + res.email + "). You can find more of my work at [My GiitHub](https://github.com/" + res.github + ")") + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## Questions" + '\n' + "### If you have any questions about the repo, contact me directly at " + [res.email](res.email) + ". You can find more of my work at [My GiitHub](https://github.com/" + res.github + ").") + '\n', function (err) {
       if (err) {
          return console.log(err)
       }

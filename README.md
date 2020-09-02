@@ -1,4 +1,7 @@
 # **Readme.md**
+## License
+### This project is licensed under the [GitHub license](http://img.shields.io/badge/license-MIT-blue.svg) license.
+
 
 ### Tast
 ## Description
@@ -10,16 +13,15 @@
 - [Contibute](#contibute)
 - [Test](#test)
 - [Questions](#questions)
-## Instructions
-### Tast
+## Installation
+### To install necessary dependencies, run the following command: 
+```Tast
+```
 ## Usage
 ### Tast
-## License
-### MIT
-
 ## Contibute
 ### Tast
 ## Test
-### Tast
-## Contact
-### If you have any questions about the repo, contact me directly at [My Email](shadysaleh01@gmail.com). You can find more of my work at [My GiitHub](https://github.com/shadysaleh01)
+### To run tests, run the following command: 
+ ```Tast
+ ```
