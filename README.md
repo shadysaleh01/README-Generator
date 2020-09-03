@@ -1,4 +1,4 @@
-# **Readme.md**
+# **README.md Generator**
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -27,4 +27,4 @@
  ```Tast
  ```
 ## Questions
-### If you have any questions about the repo, contact me directly at my [Email](mailto:Tast). You can find more of my work at my [GitHub](https://github.com/Tast).
+### If you have any questions about the repo, contact me directly at my [Email](mailto:shadysaleh01@gmail.com). You can find more of my work at my [GitHub](https://github.com/shadysaleh01).
