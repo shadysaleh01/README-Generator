@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-![Alt Test](https://drive.google.com/file/d/1ufmDXTfcrsYziI7gU-a8jKqeVNMyOanw/view)
+<iframe src="https://drive.google.com/file/d/1ufmDXTfcrsYziI7gU-a8jKqeVNMyOanw/preview" width="640" height="480"></iframe>
 
 ## Description
 ### A command line application that dynamically generates a professional README.md from a user's input, so allow the creator to spend more time working on finishing the project and less time creating a README.
