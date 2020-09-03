@@ -1,9 +1,7 @@
 # **Readme.md**
-## License
-### This project is licensed under the [GitHub license](http://img.shields.io/badge/license-MIT-blue.svg) license.
 
+![License](https://img.shields.io/badge/License-MIT-blue.svg)]
 
-### Tast
 ## Description
 ### Tast
 ## Table of Contents
@@ -21,7 +19,12 @@
 ### Tast
 ## Contibute
 ### Tast
-## Test
+## License
+### This project is licensed under the MIT license.
+
+## Tests
 ### To run tests, run the following command: 
  ```Tast
  ```
+## Questions
+### If you have any questions about the repo, contact me directly at shadysaleh01@gmail.com. You can find more of my work at [My GiitHub](https://github.com/Tast).

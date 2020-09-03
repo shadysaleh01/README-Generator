@@ -1,7 +1,5 @@
 const fs = require("fs")
 const inquirer = require("inquirer")
-// var RawList = require('prompt-rawlist');df
-
 
 const questions = [
    {
@@ -76,17 +74,17 @@ inquirer.prompt(questions).then((res) => {
       if (err) throw err
       console.log("Successfully! Created a title")
    })
-   fs.appendFileSync("README.md", ("## License" + '\n' + "### This project is licensed under the [GitHub license](http://img.shields.io/badge/license-" + res.license + "-blue.svg)" + " license." + '\n') + '\n', function (err) {
+   fs.appendFileSync("README.md", ('\n' + "![License](https://img.shields.io/badge/License-" + res.license + "-blue.svg)]" + '\n') + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
       console.log("Successfully! Created License")
    })
 
-   fs.appendFileSync("README.md", ('\n' + "### " + res.badge) + '\n', function (err) {
-      if (err) throw err
-      console.log("Successfully! Created a Badge")
-   })
+   // fs.appendFileSync("README.md", ('\n' + "### " + res.badge) + '\n', function (err) {
+   //    if (err) throw err
+   //    console.log("Successfully! Created a Badge")
+   // })
 
    fs.appendFileSync("README.md", ("## Description" + '\n' + "### " + res.description) + '\n', function (err) {
       if (err) {
@@ -121,13 +119,19 @@ inquirer.prompt(questions).then((res) => {
       }
       console.log("Seccessfully! Created Contribute")
    })
-   fs.appendFileSync("README.md", ("## Test" + '\n' + "### To run tests, run the following command: \n ```" + res.test) + "\n ```" + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## License" + '\n' + "### This project is licensed under the " + res.license + " license." + '\n') + '\n', function (err) {
+      if (err) {
+         return console.log(err)
+      }
+      console.log("Successfully! Created License")
+   })
+   fs.appendFileSync("README.md", ("## Tests" + '\n' + "### To run tests, run the following command: \n ```" + res.test) + "\n ```" + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
       console.log("Successfully! Created Test")
    })
-   fs.appendFileSync("README.md", ("## Questions" + '\n' + "### If you have any questions about the repo, contact me directly at " + (res.email) + ". You can find more of my work at [My GiitHub](https://github.com/" + res.github + ").") + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## Questions" + '\n' + "### If you have any questions about the repo, contact me directly at " + res.email + ". You can find more of my work at [My GiitHub](https://github.com/" + res.github + ").") + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
