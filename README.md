@@ -1,6 +1,6 @@
 # **Readme.md**
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)]
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 ### Tast
@@ -27,4 +27,4 @@
  ```Tast
  ```
 ## Questions
-### If you have any questions about the repo, contact me directly at shadysaleh01@gmail.com. You can find more of my work at [My GiitHub](https://github.com/Tast).
+### If you have any questions about the repo, contact me directly at my [Email](mailto:Tast). You can find more of my work at my [GitHub](https://github.com/Tast).

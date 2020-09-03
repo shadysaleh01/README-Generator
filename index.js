@@ -8,12 +8,12 @@ const questions = [
       name: "title",
       default: "Readme.md"
    },
-   {
-      type: "input",
-      message: "Enter your badge code",
-      name: "badge",
-      default: "Tast"
-   },
+   // {
+   //    type: "input",
+   //    message: "Enter your badge code",
+   //    name: "badge",
+   //    default: "Tast"
+   // },
    {
       type: "input",
       message: "Please write a description of your project?",
@@ -36,7 +36,7 @@ const questions = [
       type: "rawlist",
       message: "What kind of license should your project have?",
       name: "license",
-      choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3", "None"],
+      choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3Clause", "None"],
       default: "Tast"
    },
    {
@@ -74,7 +74,7 @@ inquirer.prompt(questions).then((res) => {
       if (err) throw err
       console.log("Successfully! Created a title")
    })
-   fs.appendFileSync("README.md", ('\n' + "![License](https://img.shields.io/badge/License-" + res.license + "-blue.svg)]" + '\n') + '\n', function (err) {
+   fs.appendFileSync("README.md", ('\n' + "[![License](https://img.shields.io/badge/License-" + res.license.slice("-") + "-blue.svg)](https://opensource.org/licenses/" + res.license + ")" + '\n') + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
@@ -119,7 +119,7 @@ inquirer.prompt(questions).then((res) => {
       }
       console.log("Seccessfully! Created Contribute")
    })
-   fs.appendFileSync("README.md", ("## License" + '\n' + "### This project is licensed under the " + res.license + " license." + '\n') + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## License" + '\n' + "### This project is licensed under the " + [res.license] + " license." + '\n') + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
@@ -131,7 +131,7 @@ inquirer.prompt(questions).then((res) => {
       }
       console.log("Successfully! Created Test")
    })
-   fs.appendFileSync("README.md", ("## Questions" + '\n' + "### If you have any questions about the repo, contact me directly at " + res.email + ". You can find more of my work at [My GiitHub](https://github.com/" + res.github + ").") + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## Questions" + '\n' + "### If you have any questions about the repo, contact me directly at my [Email](mailto:" + res.email + "). You can find more of my work at my [GitHub](https://github.com/" + res.github + ").") + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
