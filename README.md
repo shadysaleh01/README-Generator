@@ -3,12 +3,12 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-### A command line application that dynamically generates a professional README.md from a user's input, so allow the creator to spend more time working on finishing the project and less time creating a README. [Full Demo Video](https://drive.google.com/file/d/1ufmDXTfcrsYziI7gU-a8jKqeVNMyOanw/view)
+### A command line application that dynamically generates a professional README.md from a user's input, so allow the creator to spend more time working on finishing the project and less time creating a README.
 ## Table of Contents
-- [Instructions](#instructions)
+- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contibute](#contibute)
+- [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
@@ -19,15 +19,14 @@ Clone the repasitory and run the npm install to create a node-madules.
 ## Usage
 ### Run node index.js then answer the questions.
 ## Contributing
-### It depends on the project
+### It depends on the project.
 ## License
 ### This project is licensed under the MIT license.
 
 ## Tests
 ### To run tests, run the following command: 
  ``` 
-index.js
+undefined
  ```
 ## Questions
 ### If you have any questions about the repo, contact me directly at my [Email](mailto:shadysaleh01@gmail.com). You can find more of my work at my [GitHub](https://github.com/shadysaleh01).
-

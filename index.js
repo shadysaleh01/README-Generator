@@ -65,12 +65,12 @@ inquirer.prompt(questions).then((res) => {
       }
       console.log("Successfully! Created License")
    })
-   fs.appendFileSync("README.md", "![Alt Text](https://drive.google.com/file/d/1ufmDXTfcrsYziI7gU-a8jKqeVNMyOanw/view)" + '\n', function (err) {
-      if (err) {
-         return console.log(err)
-      }
-      console.log("Success")
-   })
+   // fs.appendFileSync("README.md", "![Alt Video](https://drive.google.com/file/d/1ufmDXTfcrsYziI7gU-a8jKqeVNMyOanw/view)" + '\n', function (err) {
+   //    if (err) {
+   //       return console.log(err)
+   //    }
+   //    console.log("Success")
+   // })
 
    fs.appendFileSync("README.md", ("## Description" + '\n' + "### " + res.description) + '\n', function (err) {
       if (err) {
@@ -79,7 +79,7 @@ inquirer.prompt(questions).then((res) => {
       console.log("Successfully! Created a Description")
    })
 
-   fs.appendFileSync("README.md", ("## Table of Contents" + '\n' + '- ' + ["[Instructions](#instructions)", "[Usage](#usage)", "[License](#license)", "[Contibute](#contibute)", "[Tests](#tests)", "[Questions](#questions)"].join('\n' + '- ')) + '\n', function (err) {
+   fs.appendFileSync("README.md", ("## Table of Contents" + '\n' + '- ' + ["[Installation](#installation)", "[Usage](#usage)", "[License](#license)", "[Contributing](#contributing)", "[Tests](#tests)", "[Questions](#questions)"].join('\n' + '- ')) + '\n', function (err) {
       if (err) {
          return console.log(err)
       }
@@ -123,5 +123,11 @@ inquirer.prompt(questions).then((res) => {
       }
       console.log("Successfully! Created Contacts")
    })
+   // fs.appendFileSync("README.md", "![Full Demo Video](https://drive.google.com/file/d/1ufmDXTfcrsYziI7gU-a8jKqeVNMyOanw/view)", function (err) {
+   //    if (err) {
+   //       return console.log(err)
+   //    }
+   //    console.log("seccess")
+   // })
    console.log("Generating README...")
 })
