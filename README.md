@@ -2,6 +2,12 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
 ## Description
 ### A command line application that dynamically generates a professional README.md from a user's input, so allow the creator to spend more time working on finishing the project and less time creating a README.
 ## Table of Contents
